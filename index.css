@@ -14,9 +14,10 @@ body{
 
 }
 .content {
+    
     min-width: 350px;
     min-height: 80vh;
-    margin: 10px;
+    margin: 20px auto;
     position: relative;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     background: #A78682;
@@ -28,7 +29,7 @@ body{
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    font-size: 25px;
+    font-size: 35px;
     border: #6F5060 10px solid;
     border-radius: 10px;
     box-shadow: #78776A 5px 10px 5px 2px;   
@@ -44,6 +45,7 @@ h1 {
     margin: 10px;
     font-style: italic;
     font-size: 30px;
+    text-shadow: #51344D 4px 8px 5px;
 }
 
 button {
@@ -55,7 +57,7 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 6px;
-    box-shadow: #342132 2px 4px 6px ;
+    box-shadow: #342132 8px 8px 8px ;
     margin: 8px auto;
     display: block;
 }
@@ -77,8 +79,24 @@ button {
 }
 @media screen and (min-width: 450px) {
     .content{
+        margin: 5px auto;
         width: 90vw;
-        height: 90vh;
-        font-size: 1rem;
+        height: 80vh;
+
+    }
+    p{
+        font-size: 1.7em;
+    }
+    button{
+        width: 60vw;
+        font-size: 1.7em;
+        margin: 10px;
+        padding: 10px;
+    }
+    h1{
+        font-size: 5em;
+    }
+    #message-el{
+        font-size: 1.8em;
     }
 }
