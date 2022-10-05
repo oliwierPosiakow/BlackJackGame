@@ -30,7 +30,7 @@ body{
     overflow: hidden;
     font-size: 25px;
     border: #6F5060 10px solid;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: #78776A 5px 10px 5px 2px;   
 }
 
@@ -59,6 +59,11 @@ body{
     box-shadow: #342132 8px 8px 8px ;
     margin: 8px auto;
     display: block;
+    transition: all 0.1s ease-in;
+}
+.content button:active{
+    transform: translateY(3px);
+    box-shadow: #342132 8px 5px 8px ;
 }
 #topright-spade{
     position: absolute;
@@ -77,25 +82,33 @@ body{
     text-shadow:#51344D 3px 5px 5px;
 }
 
-@media (max-width: 450px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio:3) and (orientation: portrait) {
     .content{
         margin: 5px;
         width: 90vw;
         height: 90vh;
+        
     }
     .content p{
-        font-size: 22px;
+        font-size: 60px;
+        margin-top: 30px;
     }
     .content button{
-        width: 200px;
-        font-size: 20px;
-        margin-top: 20px;
+        width: 500px;
+        font-size: 50px;
+        margin: 30px 0;
         padding: 20px;
+        transition: all 0.1 ease-in;
+    }
+    .content button:active{
+        color: black;
+        transform: translateY(20px);
+        box-shadow: #342132 8px 5px 8px ;
     }
     .content h1{
-        font-size: 55px;
+        font-size: 150px;
     }
     #message-el{
-        font-size: 30px;
+        font-size: 60px;
     }
 }
