@@ -75,6 +75,9 @@ function renderGame() {
     else if(dealerCards.length > 2){
         dealerEl.textContent = "Dealer cards: " + dealerCards[0] + " " + dealerCards[1] + " X"
     }
+    else if(dealerCards.length > 3){
+        dealerEl.textContent = "Dealer cards: " + dealerCards[0] + " " + dealerCards[1] + "" + dealerCards[2] + " X"
+    }
     renderChips()
  
     sumEl.textContent = "Sum: " + sum
@@ -90,7 +93,7 @@ function renderGame() {
             isAlive = false
         
     }
-    else if(sum <= 20) {
+    if(sum <= 20) {
         message = "Do you want to draw a new card?"
     } 
     else if (sum === 21) {
@@ -126,7 +129,7 @@ function newCard() {
 //summing game after hitting stay and deciding the result
 function sumGame(){
     if(isAlive===true){
-        
+
     if (sum < dealerSum){
             message = "Dealer win " + sum + ":" + dealerSum 
             renderDealerCards()
