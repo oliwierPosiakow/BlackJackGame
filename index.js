@@ -125,22 +125,25 @@ function newCard() {
 
 //summing game after hitting stay and deciding the result
 function sumGame(){
+    if(isAlive===true){
+        
     if (sum < dealerSum){
-        message = "Dealer win " + sum + ":" + dealerSum 
-        renderDealerCards()
-        isAlive = false 
+            message = "Dealer win " + sum + ":" + dealerSum 
+            renderDealerCards()
+            isAlive = false 
+        }
+        else if (sum === dealerSum){
+            message = "Draw " + sum + ":" + dealerSum
+            player.chips += 10
+            renderDealerCards()
+            renderChips()
+        }
+        else if(sum > dealerSum){
+            message = "You win " + sum + ":" + dealerSum
+            player.chips += 20
+            renderDealerCards()
+            renderChips()
+        }
+        messageEl.textContent = message
     }
-    else if (sum === dealerSum){
-        message = "Draw " + sum + ":" + dealerSum
-        player.chips += 10
-        renderDealerCards()
-        renderChips()
-    }
-    else if(sum > dealerSum){
-        message = "You win " + sum + ":" + dealerSum
-        player.chips += 20
-        renderDealerCards()
-        renderChips()
-    }
-    messageEl.textContent = message
 }
