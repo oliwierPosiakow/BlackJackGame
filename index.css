@@ -2,49 +2,83 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    color: #E9F19C;
+    background: #989788;
 }
-.main {
+.main{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content {
+    min-width: 350px;
+    min-height: 80vh;
+    margin: 10px;
+    position: relative;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("images/table.png");
+    background: #A78682;
     background-size: cover;
     font-weight: bold;
-    color: white;
     text-align: center;
-    width: 70vw;
-    height: 80vh;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    font-size: 20px;
-    border: grey 5px solid;
+    font-size: 25px;
+    border: #6F5060 10px solid;
     border-radius: 10px;
+    box-shadow: #78776A 5px 10px 5px 2px;   
 }
 
 h1 {
-    color: goldenrod;
+    color: #F6FFA1;
+    text-shadow: #51344D 4px 8px 5px;
+    font-size: 70px;
 }
 
 #message-el {
+    margin: 10px;
     font-style: italic;
+    font-size: 30px;
 }
 
 button {
-    color: #016f32;
-    width: 200px;
-    background: goldenrod;
+    color: #E9F19C;
+    width: 250px;
+    background: #51344D;
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: bold;
     border: none;
-    border-radius: 2px;
-    margin: 4px auto;
+    border-radius: 6px;
+    box-shadow: #342132 2px 4px 6px ;
+    margin: 8px auto;
     display: block;
-
+}
+#topright-spade{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    margin: 0px 0px;
+    font-size: 40px;
+    text-shadow:#51344D 3px 5px 5px;
+}
+#bottomleft-spade{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    margin: 0px 0px;
+    font-size: 40px;
+    text-shadow:#51344D 3px 5px 5px;
+}
+@media screen and (min-width: 450px) {
+    .content{
+        width: 90vw;
+        height: 90vh;
+        font-size: 1rem;
+    }
 }
